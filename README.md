@@ -128,6 +128,26 @@ The site is fully optimized for mobile devices:
 
 ---
 
+## 🎬 Product Reels Feature
+
+One of the standout features of this project is the **TikTok/Instagram Reels-style product feed** — built entirely with vanilla CSS and JavaScript. No external libraries.
+
+### How it works:
+- **Vertical scroll** (swipe up/down) to browse different products — uses CSS `scroll-snap` for smooth full-screen transitions
+- **Horizontal swipe** (left/right) to view multiple images of the same product
+- **Dot indicators** show which image you're viewing
+- **Arrow buttons** for desktop navigation
+- **Shop Now & Add to Cart** buttons directly on each reel
+- **Share button** with native Web Share API support
+- **Keyboard navigation** — Arrow keys work on desktop (Up/Down for products, Left/Right for images)
+- **Full-screen immersive UI** — no distractions, just product and action buttons
+- **Mobile viewport fix** — accounts for mobile browser address bar height
+
+### Why it matters:
+Modern shoppers, especially Gen Z and millennials, are used to scrolling short-form video content. This Reels-style feed brings that same addictive browsing experience to e-commerce — making product discovery engaging and fun without needing any video content.
+
+---
+
 ## 🔮 Roadmap (Phase 2 — Backend)
 
 - [ ] PHP Core backend integration
