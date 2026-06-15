@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmed - SoleStyle</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Sole<span>Style</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="reels.html">Reels</a></li>
+                </ul>
+                <div class="d-flex align-items-center navbar-icons">
+                    <a href="cart.html" class="btn"><i class="fas fa-shopping-cart"></i><span class="cart-badge">0</span></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Order Success -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="order-success">
+                <div class="success-icon">
+                    <i class="fas fa-check"></i>
+                </div>
+                <h2 class="fw-bold mb-3">Order Placed Successfully!</h2>
+                <p class="text-muted mb-2">Thank you for your purchase. Your order has been confirmed.</p>
+                <p class="mb-4">
+                    <strong>Order Number: </strong>
+                    <span class="text-primary fw-bold" id="order-number">ORD-00000001</span>
+                </p>
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <div class="card border-0 shadow-sm p-4 text-start">
+                            <h5 class="fw-bold mb-3"><i class="fas fa-info-circle text-primary me-2"></i>What's Next?</h5>
+                            <div class="d-flex align-items-start mb-3">
+                                <div class="me-3">
+                                    <span class="badge bg-primary rounded-circle p-2">1</span>
+                                </div>
+                                <div>
+                                    <h6 class="mb-1">Order Confirmation</h6>
+                                    <p class="text-muted small mb-0">You'll receive an email confirmation shortly.</p>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-start mb-3">
+                                <div class="me-3">
+                                    <span class="badge bg-primary rounded-circle p-2">2</span>
+                                </div>
+                                <div>
+                                    <h6 class="mb-1">Order Processing</h6>
+                                    <p class="text-muted small mb-0">We'll prepare your order for shipping.</p>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-start mb-3">
+                                <div class="me-3">
+                                    <span class="badge bg-primary rounded-circle p-2">3</span>
+                                </div>
+                                <div>
+                                    <h6 class="mb-1">Delivery</h6>
+                                    <p class="text-muted small mb-0">Estimated delivery: 5-7 business days.</p>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-start">
+                                <div class="me-3">
+                                    <span class="badge bg-success rounded-circle p-2">4</span>
+                                </div>
+                                <div>
+                                    <h6 class="mb-1">Pay on Delivery</h6>
+                                    <p class="text-muted small mb-0">Pay with cash when your order arrives.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-4">
+                    <a href="products.html" class="btn-primary-custom me-3">Continue Shopping</a>
+                    <a href="index.html" class="btn-outline-custom">Go to Home</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

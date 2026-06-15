@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory - SoleStyle Admin</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="../css/admin.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="admin-sidebar">
+        <div class="sidebar-brand">
+            <h4>Sole<span style="color:#fff">Style</span></h4>
+            <span>Admin Panel</span>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="index.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+            <li><a href="products.html"><i class="fas fa-box"></i> Products</a></li>
+            <li><a href="orders.html"><i class="fas fa-shopping-bag"></i> Orders</a></li>
+            <li><a href="customers.html"><i class="fas fa-users"></i> Customers</a></li>
+            <li><a href="categories.html"><i class="fas fa-tags"></i> Categories</a></li>
+            <li><a href="inventory.html" class="active"><i class="fas fa-warehouse"></i> Inventory</a></li>
+            <li><a href="../index.html"><i class="fas fa-external-link-alt"></i> View Store</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="admin-main">
+        <div class="admin-topbar">
+            <div class="d-flex align-items-center">
+                <button class="btn btn-link d-lg-none sidebar-toggle me-2"><i class="fas fa-bars"></i></button>
+                <h5 class="page-title mb-0">Inventory Management</h5>
+            </div>
+            <div class="topbar-right">
+                <button class="notification-btn">
+                    <i class="fas fa-bell"></i>
+                    <span class="badge">3</span>
+                </button>
+                <img src="https://ui-avatars.com/api/?name=Admin&background=FF6B35&color=fff&size=35" alt="Admin" class="admin-avatar">
+            </div>
+        </div>
+
+        <div class="admin-content">
+            <!-- Inventory Alerts -->
+            <div class="row g-3 mb-4">
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm p-3">
+                        <div class="d-flex align-items-center">
+                            <div class="stat-icon bg-green me-3"><i class="fas fa-check"></i></div>
+                            <div>
+                                <h5 class="mb-0">5</h5>
+                                <small class="text-muted">In Stock</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm p-3">
+                        <div class="d-flex align-items-center">
+                            <div class="stat-icon bg-orange me-3"><i class="fas fa-exclamation-triangle"></i></div>
+                            <div>
+                                <h5 class="mb-0">2</h5>
+                                <small class="text-muted">Low Stock</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm p-3">
+                        <div class="d-flex align-items-center">
+                            <div class="stat-icon" style="background:rgba(220,53,69,0.15);color:#dc3545"><i class="fas fa-times-circle"></i></div>
+                            <div class="ms-3">
+                                <h5 class="mb-0">1</h5>
+                                <small class="text-muted">Out of Stock</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Low Stock Alert -->
+            <div class="alert alert-warning d-flex align-items-center mb-4" role="alert">
+                <i class="fas fa-exclamation-triangle me-3 fa-lg"></i>
+                <div>
+                    <strong>Low Stock Alert!</strong> 2 products are running low on stock. Please restock soon to avoid missing sales.
+                </div>
+            </div>
+
+            <div class="admin-table-card">
+                <div class="card-header">
+                    <h5>Stock Levels</h5>
+                    <select class="form-select form-select-sm" style="width:auto">
+                        <option>All Products</option>
+                        <option>Low Stock</option>
+                        <option>Out of Stock</option>
+                        <option>In Stock</option>
+                    </select>
+                </div>
+                <div class="table-responsive">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>Image</th>
+                                <th>Product</th>
+                                <th>Category</th>
+                                <th>Stock</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="inventory-table-body">
+                            <!-- Rendered by JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Update Stock Modal -->
+    <div class="modal fade" id="stockModal" tabindex="-1">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Update Stock</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="stockForm">
+                        <p class="mb-3">Product: <strong id="stockProductName"></strong></p>
+                        <div class="mb-3">
+                            <label class="form-label">New Stock Quantity</label>
+                            <input type="number" class="form-control" id="stockQuantity" min="0" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Update Stock</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/admin.js"></script>
+</body>
+</html>

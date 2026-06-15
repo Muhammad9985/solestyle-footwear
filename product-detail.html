@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail - SoleStyle</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Toast Container -->
+    <div class="toast-container"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Sole<span>Style</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="reels.html">Reels</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Categories</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="products.html?cat=men">Men</a></li>
+                            <li><a class="dropdown-item" href="products.html?cat=women">Women</a></li>
+                            <li><a class="dropdown-item" href="products.html?cat=kids">Kids</a></li>
+                            <li><a class="dropdown-item" href="products.html?cat=sports">Sports</a></li>
+                            <li><a class="dropdown-item" href="products.html?cat=casual">Casual</a></li>
+                            <li><a class="dropdown-item" href="products.html?cat=formal">Formal</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center navbar-icons">
+                    <a href="cart.html" class="btn"><i class="fas fa-shopping-cart"></i><span class="cart-badge">0</span></a>
+                    <a href="#" class="btn"><i class="fas fa-user"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb-section">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="products.html">Products</a></li>
+                    <li class="breadcrumb-item active" id="breadcrumb-product">Nike Air Max 270</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Product Detail -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Product Gallery -->
+                <div class="col-lg-6">
+                    <div class="product-gallery">
+                        <div class="main-image">
+                            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&h=500&fit=crop" alt="Product" id="detail-main-img">
+                        </div>
+                        <div class="thumbnails">
+                            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=100&h=100&fit=crop" alt="View 1" class="active">
+                            <img src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=100&h=100&fit=crop" alt="View 2">
+                            <img src="https://images.unsplash.com/photo-1600269452121-4f2416e55c28?w=100&h=100&fit=crop" alt="View 3">
+                            <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=100&h=100&fit=crop" alt="View 4">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Info -->
+                <div class="col-lg-6">
+                    <div class="product-detail-info">
+                        <span class="badge bg-success mb-2">In Stock</span>
+                        <h1 class="product-title" id="detail-product-name">Nike Air Max 270</h1>
+                        <div class="mb-3" id="detail-rating">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star-half-alt text-warning"></i>
+                            <span class="ms-2 text-muted">(128 reviews)</span>
+                        </div>
+                        <div class="product-price-large mb-4" id="detail-product-price">
+                            $150 <span style="font-size:1.2rem;color:#6c757d;text-decoration:line-through;font-weight:400">$180</span>
+                        </div>
+
+                        <p class="text-muted mb-4">Experience ultimate comfort with the Nike Air Max 270. Featuring the tallest Air unit yet, it delivers a super-soft ride that keeps you bouncing all day. The sleek design pairs perfectly with any outfit.</p>
+
+                        <!-- Size Selector -->
+                        <div class="mb-4">
+                            <h6 class="fw-bold mb-3">Select Size</h6>
+                            <div class="size-selector">
+                                <button class="size-btn">7</button>
+                                <button class="size-btn">8</button>
+                                <button class="size-btn active">9</button>
+                                <button class="size-btn">10</button>
+                                <button class="size-btn">11</button>
+                                <button class="size-btn">12</button>
+                            </div>
+                        </div>
+
+                        <!-- Color & Quantity in same row -->
+                        <div class="row mb-4">
+                            <div class="col-6">
+                                <h6 class="fw-bold mb-3">Select Color</h6>
+                                <div class="color-selector">
+                                    <button class="color-btn active" style="background:#000000"></button>
+                                    <button class="color-btn" style="background:#ffffff"></button>
+                                    <button class="color-btn" style="background:#FF6B35"></button>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <h6 class="fw-bold mb-3">Quantity</h6>
+                                <div class="quantity-control">
+                                    <button id="qty-minus">-</button>
+                                    <input type="text" value="1" id="detail-qty" readonly>
+                                    <button id="qty-plus">+</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <div class="d-flex gap-3 mb-4 flex-wrap">
+                            <button class="btn-primary-custom flex-grow-1" id="detail-add-to-cart">
+                                <i class="fas fa-shopping-cart me-2"></i>Add to Cart
+                            </button>
+                            <button class="btn-outline-custom">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                        </div>
+
+                        <!-- Product Meta -->
+                        <div class="border-top pt-3">
+                            <p class="mb-2"><strong>SKU:</strong> NKE-AM270-BLK</p>
+                            <p class="mb-2"><strong>Category:</strong> <a href="products.html?cat=men" class="text-primary">Men</a></p>
+                            <p class="mb-2"><strong>Brand:</strong> Nike</p>
+                            <p class="mb-0"><strong>Tags:</strong> Sneakers, Running, Lifestyle</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Tabs -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <ul class="nav nav-tabs" id="productTabs">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-bs-toggle="tab" href="#description">Description</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tab" href="#reviews">Reviews (128)</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tab" href="#shipping">Shipping</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content p-4 border border-top-0 rounded-bottom">
+                        <div class="tab-pane fade show active" id="description">
+                            <h5>Product Description</h5>
+                            <p>The Nike Air Max 270 delivers visible cushioning under every step. Updated for modern comfort, it nods to the original 1991 Air Max 180 with its exaggerated tongue top and heritage colors.</p>
+                            <ul>
+                                <li>Mesh upper for breathable comfort</li>
+                                <li>Air Max 270 unit for responsive cushioning</li>
+                                <li>Foam midsole for lightweight comfort</li>
+                                <li>Rubber outsole for traction</li>
+                                <li>Pull tab on heel for easy on and off</li>
+                            </ul>
+                        </div>
+                        <div class="tab-pane fade" id="reviews">
+                            <div class="d-flex align-items-start mb-4 pb-4 border-bottom">
+                                <div class="me-3">
+                                    <div style="width:50px;height:50px;background:#f0f0f0;border-radius:50%;display:flex;align-items:center;justify-content:center"><i class="fas fa-user text-muted"></i></div>
+                                </div>
+                                <div>
+                                    <div class="d-flex align-items-center mb-1">
+                                        <strong class="me-2">John D.</strong>
+                                        <span class="text-warning"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                                    </div>
+                                    <small class="text-muted">Verified Purchase • 2 weeks ago</small>
+                                    <p class="mt-2 mb-0">Absolutely love these shoes! Super comfortable for everyday wear. The Air unit really makes a difference.</p>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-start mb-4">
+                                <div class="me-3">
+                                    <div style="width:50px;height:50px;background:#f0f0f0;border-radius:50%;display:flex;align-items:center;justify-content:center"><i class="fas fa-user text-muted"></i></div>
+                                </div>
+                                <div>
+                                    <div class="d-flex align-items-center mb-1">
+                                        <strong class="me-2">Sarah M.</strong>
+                                        <span class="text-warning"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></span>
+                                    </div>
+                                    <small class="text-muted">Verified Purchase • 1 month ago</small>
+                                    <p class="mt-2 mb-0">Great style and comfort. Runs a bit small though, so I'd recommend going half a size up.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="shipping">
+                            <h5>Shipping Information</h5>
+                            <ul>
+                                <li><strong>Free Shipping:</strong> On orders over $100</li>
+                                <li><strong>Standard Delivery:</strong> 5-7 business days</li>
+                                <li><strong>Express Delivery:</strong> 2-3 business days ($15)</li>
+                                <li><strong>Returns:</strong> Free returns within 30 days</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Related Products -->
+            <div class="mt-5">
+                <h3 class="section-title">You May Also Like</h3>
+                <div class="row mt-4" id="related-products">
+                    <!-- Rendered by JS or static -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <button class="back-to-top"><i class="fas fa-chevron-up"></i></button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

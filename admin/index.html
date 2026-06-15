@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - SoleStyle</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="../css/admin.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="admin-sidebar">
+        <div class="sidebar-brand">
+            <h4>Sole<span style="color:#fff">Style</span></h4>
+            <span>Admin Panel</span>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="index.html" class="active"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+            <li><a href="products.html"><i class="fas fa-box"></i> Products</a></li>
+            <li><a href="orders.html"><i class="fas fa-shopping-bag"></i> Orders</a></li>
+            <li><a href="customers.html"><i class="fas fa-users"></i> Customers</a></li>
+            <li><a href="categories.html"><i class="fas fa-tags"></i> Categories</a></li>
+            <li><a href="inventory.html"><i class="fas fa-warehouse"></i> Inventory</a></li>
+            <li><a href="../index.html"><i class="fas fa-external-link-alt"></i> View Store</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="admin-main">
+        <!-- Top Bar -->
+        <div class="admin-topbar">
+            <div class="d-flex align-items-center">
+                <button class="btn btn-link d-lg-none sidebar-toggle me-2"><i class="fas fa-bars"></i></button>
+                <h5 class="page-title mb-0">Dashboard</h5>
+            </div>
+            <div class="topbar-right">
+                <button class="notification-btn">
+                    <i class="fas fa-bell"></i>
+                    <span class="badge">3</span>
+                </button>
+                <img src="https://ui-avatars.com/api/?name=Admin&background=FF6B35&color=fff&size=35" alt="Admin" class="admin-avatar">
+            </div>
+        </div>
+
+        <!-- Content -->
+        <div class="admin-content">
+            <!-- Stats Cards -->
+            <div class="row g-4 mb-4">
+                <div class="col-xl-3 col-md-6">
+                    <div class="stat-card">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <div>
+                                <p class="stat-label">Total Orders</p>
+                                <h3 class="stat-value" id="total-orders">0</h3>
+                                <span class="stat-change positive"><i class="fas fa-arrow-up"></i> 12% from last month</span>
+                            </div>
+                            <div class="stat-icon bg-orange"><i class="fas fa-shopping-bag"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6">
+                    <div class="stat-card" style="border-left-color: #004E89">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <div>
+                                <p class="stat-label">Total Revenue</p>
+                                <h3 class="stat-value" id="total-revenue">$0</h3>
+                                <span class="stat-change positive"><i class="fas fa-arrow-up"></i> 8% from last month</span>
+                            </div>
+                            <div class="stat-icon bg-blue"><i class="fas fa-dollar-sign"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6">
+                    <div class="stat-card" style="border-left-color: #28a745">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <div>
+                                <p class="stat-label">Total Products</p>
+                                <h3 class="stat-value" id="total-products">0</h3>
+                                <span class="stat-change positive"><i class="fas fa-arrow-up"></i> 3 new this week</span>
+                            </div>
+                            <div class="stat-icon bg-green"><i class="fas fa-box"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6">
+                    <div class="stat-card" style="border-left-color: #6f42c1">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <div>
+                                <p class="stat-label">Total Customers</p>
+                                <h3 class="stat-value" id="total-customers">0</h3>
+                                <span class="stat-change positive"><i class="fas fa-arrow-up"></i> 5% from last month</span>
+                            </div>
+                            <div class="stat-icon bg-purple"><i class="fas fa-users"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Charts Row -->
+            <div class="row g-4 mb-4">
+                <div class="col-lg-8">
+                    <div class="chart-card">
+                        <h5>Revenue Overview</h5>
+                        <div class="chart-placeholder">
+                            <div class="text-center">
+                                <i class="fas fa-chart-line fa-3x mb-3" style="color:#FF6B35"></i>
+                                <p>Revenue chart visualization</p>
+                                <small class="text-muted">Integrate with Chart.js for live data</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="chart-card">
+                        <h5>Sales by Category</h5>
+                        <div class="chart-placeholder">
+                            <div class="text-center">
+                                <i class="fas fa-chart-pie fa-3x mb-3" style="color:#004E89"></i>
+                                <p>Category breakdown</p>
+                                <small class="text-muted">Integrate with Chart.js for live data</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Orders -->
+            <div class="admin-table-card">
+                <div class="card-header">
+                    <h5>Recent Orders</h5>
+                    <a href="orders.html" class="btn btn-sm btn-outline-primary">View All</a>
+                </div>
+                <div class="table-responsive">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Customer</th>
+                                <th>Date</th>
+                                <th>Total</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="recent-orders-table">
+                            <!-- Rendered by JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/admin.js"></script>
+</body>
+</html>

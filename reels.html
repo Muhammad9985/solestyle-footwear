@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Reels - SoleStyle</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="css/reels.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="reel-loading">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Top Navigation -->
+    <div class="reel-top-nav">
+        <a href="index.html" class="back-btn">
+            <i class="fas fa-arrow-left"></i>
+            <span>Back</span>
+        </a>
+        <h5>Product Reels</h5>
+        <a href="cart.html" class="cart-btn">
+            <i class="fas fa-shopping-bag"></i>
+            <span class="badge">0</span>
+        </a>
+    </div>
+
+    <!-- Progress Dots -->
+    <div class="reel-progress"></div>
+
+    <!-- Reels Container -->
+    <div class="reels-container">
+        <!-- Reels rendered by JS -->
+    </div>
+
+    <!-- Swipe Indicator -->
+    <div class="swipe-indicator">
+        <i class="fas fa-chevron-up"></i>
+        Swipe up for next
+    </div>
+
+    <!-- Mobile viewport height fix -->
+    <script>
+        function setVH() {
+            let vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', vh + 'px');
+            document.querySelector('.reels-container').style.height = window.innerHeight + 'px';
+            document.querySelectorAll('.reel-item').forEach(el => {
+                el.style.height = window.innerHeight + 'px';
+            });
+        }
+        setVH();
+        window.addEventListener('resize', setVH);
+        window.addEventListener('orientationchange', () => setTimeout(setVH, 100));
+    </script>
+
+    <script src="js/reels.js"></script>
+</body>
+</html>
